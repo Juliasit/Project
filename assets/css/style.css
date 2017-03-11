@@ -1,0 +1,139 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+  visibility: hidden;
+}
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+@font-face {
+  font-family: webfont;/*имя шрифта*/
+  src:url(../fonts/open-sans.regular.ttf); /*путь к файлу со шрифтом*/
+}
+@font-face {
+    font-family: webfontВ;/*имя шрифта*/
+    src:url(../fonts/open-sans.extrabold.ttf); /*путь к файлу со шрифтом*/
+  }
+
+.container{
+  width: 980px;/*ширина*/
+  margin: 0 auto;
+}
+.menu_img{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  cursor: pointer;
+  z-index: 2;
+}
+.abs_black{
+  position: fixed;
+  background: rgba(0, 0, 0, .6);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+}
+.fixed_menu{
+position: fixed;
+background: #fff;
+width: 30%;
+height: 100%;
+z-index: 4;
+top:0;
+left: -30%;
+transition: 1s;
+opacity: 0;
+}
+.close{
+  width: 30px;
+  cursor: pointer;
+  float: right;
+  display: block;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.fixed_menu a{
+  width: 50%;
+  display: block;
+  margin-top: 20px;
+  padding: 20px 5%;
+}
+.burger{
+  width: 400px;
+  margin: 0 auto;
+}
+.title{
+  border: 1px solid black;
+  margin: 0;
+  padding: 20px 0;
+}
+.info{
+  width: 300px;
+  border: 1px solid black;
+  margin: 0 auto;
+  display: none;
+}
+.info.active{
+  display: block;
+}
+
+/*...........animation........*/
+
+@keyframes rotate1 {
+0%{transform: rotate(0deg);}
+20%{transform: rotate(-60deg);}
+40%{transform: rotate(30deg);}
+60%{transform: rotate(0deg);}
+}
+.rotate1{
+  animation-name: rotate1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes rotate2 {
+0%{transform: rotate(0deg);}
+20%{transform: rotate(60deg);}
+40%{transform: rotate(-30deg);}
+60%{transform: rotate(0deg);}
+}
+.rotate2{
+  animation-name: rotate2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+}
+
+
+.blocks{
+  height: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.red_block{
+width: 100px;
+height: 100px;
+background: #f00;
+margin: 30px;
+transition: 1s;
+visibility: hidden;
+}
+.video{
+  margin: 0 auto;
+}
+/*.video iframe{
+  width: 100vw;
+  height: 100vh;
+}*/
